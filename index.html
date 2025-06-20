@@ -1,0 +1,174 @@
+<!DOCTYPE html><html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cuidado de las Áreas Verdes - Barrio Del Carmen</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; font-family: 'Segoe UI', sans-serif; }
+    body { background-color: #f9fdf9; color: #333; }
+    header { background: linear-gradient(90deg, #4CAF50, #2E7D32); color: #fff; padding: 2rem 1rem; text-align: center; position: sticky; top: 0; z-index: 1000; }
+    nav ul { display: flex; justify-content: center; gap: 20px; list-style: none; margin-top: 15px; }
+    nav a { color: #fff; text-decoration: none; font-weight: bold; transition: color 0.3s ease; }
+    nav a:hover { color: #d0f0d0; }
+    .seccion { padding: 3rem 1rem; max-width: 1200px; margin: auto; }
+    .seccion h2 { text-align: center; color: #2E7D32; margin-bottom: 2rem; font-size: 2.5rem; }
+    .contenedor-flex { display: flex; flex-wrap: wrap; gap: 2rem; align-items: flex-start; justify-content: center; }
+    .contenedor-flex img { width: 100%; max-width: 400px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
+    .texto { flex: 1 1 300px; line-height: 1.6; }
+    .galeria { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+    .galeria-item { position: relative; overflow: hidden; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
+    .galeria-item img { width: 100%; display: block; transition: transform 0.3s ease; }
+    .galeria-item:hover img { transform: scale(1.1); }
+    .galeria-item .info { position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.7); color: #fff; padding: 1rem; opacity: 0; transition: opacity 0.3s ease; font-size: 0.9rem; }
+    .galeria-item:hover .info { opacity: 1; }
+    form { max-width: 500px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem; }
+    input, textarea, button { padding: 0.8rem; border-radius: 5px; border: 1px solid #ccc; font-size: 1rem; }
+    button { background-color: #2E7D32; color: #fff; border: none; cursor: pointer; transition: background-color 0.3s ease; }
+    button:hover { background-color: #388E3C; }
+    .mensaje-exito { color: #2E7D32; text-align: center; margin-top: 1rem; font-weight: bold; display: none; }
+    footer { background: #2E7D32; color: #fff; text-align: center; padding: 1rem; font-size: 0.9rem; margin-top: 2rem; }
+    .redes { margin-top: 1rem; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+    .redes a { color: #fff; text-decoration: none; font-weight: bold; border: 1px solid #fff; padding: 5px 10px; border-radius: 5px; transition: background-color 0.3s ease; }
+    .redes a:hover { background-color: #1B5E20; }
+  </style>
+  <script>
+    function enviarDonacion(event) {
+      event.preventDefault();
+      const nombre = document.getElementById('nombre').value;
+      const email = document.getElementById('email').value;
+      const mensaje = document.getElementById('mensaje').value;
+      const textoWhatsApp = `Hola, quiero más información sobre el proyecto de cuidado de áreas verdes.\nMi nombre es ${nombre}, mi correo es ${email}.\nCantidad a donar o mensaje: ${mensaje}`;
+      const urlWhatsApp = `https://wa.me/527296097307?text=${encodeURIComponent(textoWhatsApp)}`;
+      window.open(urlWhatsApp, '_blank');
+      document.getElementById('mensajeExito').style.display = 'block';
+    }
+  </script>
+</head>
+<body><header>
+  <h1>El Cuidado de las Áreas Verdes</h1>
+  <h2>Barrio Del Carmen</h2>
+  <nav>
+    <ul>
+      <li><a href="index.html" class="#inicio">inicio</a></li>
+      <li><a href="#informacion">Información</a></li>
+      <li><a href="#beneficios">Beneficios</a></li>
+      <li><a href="#portafolio">Galería</a></li>
+      <li><a href="#testimonios">Testimonios</a></li>
+      <li><a href="#eventos">Eventos</a></li>
+      <li><a href="#faq">Preguntas</a></li>
+      <li><a href="#donaciones">Donaciones</a></li>
+      <li><a href="#voluntarios">Voluntarios</a></li>
+    </ul>
+  </nav>
+</header><section id="informacion" class="seccion">
+  <h2>¿Por que cuidar nuestras areas verdes?</h2>
+  <div class="contenedor-flex">
+    <img src="img/logo.jpg" alt="Logo del proyecto">
+    <div class="texto">
+      <p>Cuidar el medio ambiente ayuda a conservar nuestra salud, protege a los animales y mejora la calidad del aire que respiramos. Además, nos une como comunidad.</p>
+
+      <p>Las plantas y arboles capturan dioxido de carbano (CO2) y liberan oxigeno, lo que ayudan a purificar el aire que respiramos.Tambien filtran contaminantes y porvo.</p>
+
+      <p>Las areas verdes reducen el efecto de "isla de calor" en las ciudades.Gracias a la sombra y el proceso de transpiracion de las plantas, audan a mantener un clima mas fresco.<p>
+
+      <p>El suelo con vegetacion absorbe mejor el agua de lluvia, lo que reduce el riesgo de innundaciones,Ademas, ayuda a recargar los mantos acuiferos.</p>
+
+      <p>son el hogar de aves, insectos, mariposas y pequeños animales que ayudan a mantener el equilibrio ecologico</p>
+
+      <p>Los jardines bien cuidados hacen que los barrios sean mas bonitos, agradables y aumentan el valor de las viviendas cercanas.</p>
+
+      <p>Promueven en niños y adultos el respeto por la naturaleza, enseñando la importancia del cuidado del planeta desde lo cotidiano.</p>
+    </div>
+  </div>
+</section><section id="beneficios" class="seccion">
+  <h2>Beneficios</h2>
+  <ul class="texto">
+    <li>Mejora de la calidad del aire y del agua.</li>
+    <p>|</p>
+    <li>Más espacios verdes recreativos.</li>
+    <p>|</p>
+    <li>Fomenta la convivencia y unión entre vecinos</li>
+    <p>|</p>
+    <li>Protege la fauna local.</li>
+    <p>|</p>
+    <li>Aumentan el oxigeno disponible para respirar.</li>
+    <p>|</p>
+    <li>Purifican el aire, eliminando gases contaminantes.</li>
+    <p>|</p>
+    <li>Reducen el calor en las ciudades.</li>
+    <p>|</p>
+    <li>mantienen el ambiente fresco y agradable.</li>
+    <p>|</p>
+    <li>sirven de hogar para animales como aves, e insectos.</li>
+    <p>|</p>
+    <li>Mantienen el equilibrio ecologico.</li>
+    <p>|</p>
+    <li>Reducen el estres y la ansiedad.</li>
+    <p>|</p>
+    <li>Fomentan actividades fisicas como caminar o correr.</li>
+    <p>|</p>
+    <h3><li>estos solo son algunos ejemplos de los beneficios que puede generar en las areas verdes de la cominidad.</li></h3>
+  </ul>
+</section><section id="portafolio" class="seccion">
+  <h2>Galería de Imágenes</h2>
+  <div class="galeria">
+    <div class="galeria-item"><img src="img/7.png" alt="imagen"><div class="info"><h5>importancia:</h5>
+
+    Es importante cuidar del medio ambiente para poder vivir sin complicaciones, ademas poner de nuestra parte para lograrlo</div></div>
+    <div class="galeria-item"><img src="img/8.png" alt="imagen"><div class="info"><h5>Acciones para cuidar el medio abiente:</h5>reutilizar frascos, bolsas y botellas, utilizar bisicleta como transporte o caminar en trayectos cortos,crear jardines y huertos,apagar las luces y desenchufar aparatos electronicos cuando no se usen</div></div>
+    <div class="galeria-item"><img src="img/9.jpg" alt="imagen"><div class="info"> <h5>neficios de areas verdes:</h5><p>-El aire es puro y no contiene reciduos de humo al momento de respirar.</p>
+                     <p>-Los animales acuaticos como de campo no se enfermarian con mucha frecuensia por cosas de contaminacion.</p></div></div>
+  </div>
+</section><section id="testimonios" class="seccion">
+  <h2>Testimonios</h2>
+  <div class="texto">
+    <h4>1.-</h4><p>"Desde que cuidamos el parque, los niños juegan más seguros y el barrio luce más bonito." - Juan, vecino.</p>
+    <h4>2.-</h4><p>"Recogimos basura durante un mes, ¡y logramos cambiar nuestro entorno!" - María, voluntaria</p>
+    <h4>3.-</h4><p>"las areas verdes de nuestro barrio son un respiro para la familia.Mis hijos juegan seguros, hacemos picnic los fines de semana, y hemos conocido a muchos vecinos.Es un lugar que une a la comunidad." - Maria, vecina.</p>
+    <h4>4.-</h4><p>"Antes casi no salia de casa, pero desde que mejoraron el parque, vengo todos los dias a caminar y coversar con amigos.La sombra de los arboles y el canto de los pajaros me hacen sentir en paz." - Don Ernesto, jubilado.</p>
+    <h4>5.-</h4><p>"El area verde de la esquina es perfecta para entrenar.Corro por las mañanas y hago ejercicio al aire libre. me motiva ver a otros jovenes tambien cuidando el espacio". - Lucas, estudiante de preparatoria.</p>
+  </div>
+</section><section id="eventos" class="seccion">
+  <h2>Próximos Eventos</h2>
+  <div class="texto">
+    <ul>
+      <li>📅 Jornada de limpieza - 15 de julio</li>
+      <li>📅 Plantación de árboles - 1 de agosto</li>
+      <li>📅 Festival Verde - 20 de agosto</li>
+      <li>📅 Festival Familiar "verde vida" - 23 de agosto</li>
+      <li>📅 Cine al Aire Libre - 5 de septiembre</li>
+      <li>📅 Taller de Huertos Urbanos - 10 de septiembre</li>
+      <li>📅 Caminata Vecinal + Yoga al amanecer - 14 de octubre</li>
+    </ul>
+  </div>
+</section><section id="faq" class="seccion">
+  <h2>Preguntas Frecuentes</h2>
+  <div class="texto">
+    <p><strong>¿Cómo puedo participar?</strong> Únete a nuestros eventos o escríbenos por WhatsApp.</p>
+    <p><strong>¿Qué se hace con las donaciones?</strong> Compramos plantas, bolsas para basura y materiales para actividades comunitarias.</p>
+    <p><strong>¿Con que frecuencia se realizan actividades?</strong> Organizamos actividades cada mes y en algunas semanas hay mas de una.¡Mantente atento a nuestras redes y paginas web!</p>
+    <p><strong>¿Puedo sugerir un proyecto o actividad?</strong> ¡Claro que si! Escribenos por WhatsApp o en la seccion de contacto. Nos encanto recibir ideas de los vecinos.</p>
+  </div>
+</section><section id="donaciones" class="seccion">
+  <h2>Formulario de Donaciones</h2>
+  <form onsubmit="enviarDonacion(event)">
+    <input type="text" id="nombre" placeholder="Tu Nombre" required>
+    <input type="email" id="email" placeholder="Tu Correo Electrónico" required>
+    <textarea id="mensaje" placeholder="Cantidad a donar o mensaje..." rows="4" required></textarea>
+    <button type="submit">Enviar por WhatsApp</button>
+    <div id="mensajeExito" class="mensaje-exito">¡Gracias por tu donación!</div>
+  </form>
+</section><section id="voluntarios" class="seccion">
+  <h2>Únete como Voluntario</h2>
+  <div class="texto">
+    <p>Si deseas formar parte de nuestro equipo de voluntarios, contáctanos directamente por <a href="https://wa.me/527296097307?text=Hola,%20quiero%20ser%20voluntario%20en%20el%20proyecto%20de%20áreas%20verdes" target="_blank">WhatsApp</a>.</p>
+  </div>
+</section><footer>
+  &copy; 2025 Barrio Del Carmen | Todos los derechos reservados
+  <div class="redes">
+    <a href="https://facebook.com" target="_blank">Facebook</a>
+    <a href="https://instagram.com" target="_blank">Instagram</a>
+    <a href="https://wa.me/527296097307?text=Hola,%20quiero%20más%20información%20sobre%20el%20proyecto%20de%20áreas%20verdes.%20Me%20gustaría%20hacer%20una%20donación%20o%20participar." target="_blank">WhatsApp</a>
+  </div>
+</footer></body>
+</html>
